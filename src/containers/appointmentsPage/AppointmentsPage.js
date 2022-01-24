@@ -5,6 +5,9 @@ export const AppointmentsPage = () => {
   Define state variables for 
   appointment info
   */
+  const appointments = props.appointments;
+  const contacts = props.contacts;
+  const addAppointment = props.addAppointment;
 
   const handleSubmit = (e) => {
     e.preventDefault();
