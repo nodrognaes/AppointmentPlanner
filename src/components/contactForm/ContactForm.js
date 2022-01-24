@@ -22,6 +22,7 @@ export const ContactForm = ({
       <input
         type="tel"
         value={phone}
+        pattern="(^[2-9]\d{2}-\d{3}-\d{4}$)"
         onChange={(e) => {
           setPhone(e.target.value)
         }}
