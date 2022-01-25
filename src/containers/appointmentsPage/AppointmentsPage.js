@@ -39,12 +39,13 @@ export const AppointmentsPage = (props) => {
           setDate={setDate}
           setTime={setTime}
           handleSubmit={handleSubmit}
+          contacts={props.contacts}
         />
       </section>
       <hr />
       <section>
         <h2>Appointments</h2>
-        <TileList objArr={props.appointments}/>
+        <TileList objArr={appointments}/>
       </section>
     </div>
   );
