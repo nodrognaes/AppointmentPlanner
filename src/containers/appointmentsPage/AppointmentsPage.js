@@ -17,7 +17,7 @@ export const AppointmentsPage = (props) => {
     /*
     Add contact info and clear data  
     */
-    addAppointment(title, contact, date, time)
+    props.addAppointment(title, contact, date, time)
 
     setTitle('');
     setContact('');
@@ -45,7 +45,7 @@ export const AppointmentsPage = (props) => {
       <hr />
       <section>
         <h2>Appointments</h2>
-        <TileList objArr={appointments}/>
+        <TileList objArr={props.appointments}/>
       </section>
     </div>
   );
