@@ -35,14 +35,14 @@ export const ContactsPage = (props) => {
   Using hooks, check for contact name in the 
   contacts array variable in props
   */
-  useEffect(() => {
-    for (const contact of contacts) {
-      if (name === contact.name) {
-        setDuplicate(true);
-      }
-      return;
+  useEffect( ()=>{
+    let checker = contacts.map( contact => contact.name ).indexOf(name);
+    if(checker !== -1){
+      setDuplicate(true);
+    } else {
+      setDuplicate(false);
     }
-  });
+  },[contacts, name]);
 
   return (
     <div>
@@ -62,7 +62,7 @@ export const ContactsPage = (props) => {
       <section>
         <h2>Contacts</h2>
         <TileList
-          contArr={props.contacts}
+          objArr={contacts}
         />
       </section>
     </div>
